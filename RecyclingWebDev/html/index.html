@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Recycling Information and Services</title>
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+    <header>
+        <div class="logo">Wastewise</div>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                
+                <li><a href="services.html">Services</a></li>
+               
+                <li><a href="../contact.html/contact.html">Contact</a></li>
+                <li><a href="../login.html/login.html">Login/Register</a></li>
+            </ul>
+        </nav>
+    </header>
+    
+    <main>
+        <section class="banner">
+            <h1 >Dumpster-Dive</h1>
+            <input type="text" placeholder="Search for services...">
+        </section>
+        <div class="chat-container">
+            <div class="chat-box" id="chat-box">
+                <div class="chat-message user-message">Hi, how can I help you today?</div>
+            </div>
+            <input type="text" id="chat-input" placeholder="Ask me anything about recycling..." onkeypress="checkEnter(event)">
+            <button onclick="sendMessage()">Send</button>
+        </div>
+        
+        <section class="quick-links">
+            <div class="quick-link">
+                <img src="../Images/Findservices.jpg" alt="Find Services">
+                <p>Find Services</p>
+            </div>
+            <div class="quick-link">
+                <img src="../Images/search.jpg" alt="Learn About Recycling">
+                <p>Learn About Recycling</p>
+            </div>
+            <div class="quick-link">
+                <img src="../Images/GarbageTruck.jpg" alt="Request a Pickup">
+                <p>Request a Pickup</p>
+            </div>
+            <div class="quick-link">
+                <img src="../Images/feedback.jpg" alt="Give Feedback">
+                <p>Give Feedback</p>
+            </div>
+        </section>
+    </main>
+
+    
+    
+    <script src="script.js"></script>
+</body>
+</html>
