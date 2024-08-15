@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Register - WasteWise</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="../css/style.css">
+    <style>
+        .full-height {
+            min-height: 100vh;
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            padding-top: 80px;
+            padding-bottom: 80px;
+            border-bottom: 2px solid #f5f5dc; /* cream */
+        }
+    </style>
+</head>
+<body>
+    <header class="bg-dark text-white p-3 mb-4">
+        <div class="container">
+            <div class="d-flex justify-content-between align-items-center">
+                <div class="logo">WasteWise</div>
+                <nav>
+                    <ul class="nav">
+                        <li class="nav-item"><a class="nav-link text-white" href="index.html">Home</a></li>
+                        <li class="nav-item"><a class="nav-link text-white" href="about.html">About</a></li>
+                        <li class="nav-item"><a class="nav-link text-white" href="services.html">Services</a></li>
+                        <li class="nav-item"><a class="nav-link text-white" href="contact.html">Contact</a></li>
+                        <li class="nav-item"><a class="nav-link text-white" href="login.html">Login/Register</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+    </header>
+
+    <section class="bg-light full-height px-lg-5">
+        <div class="container">
+            <div class="justify-content-center text-center">
+                <h1 class="mb-3">Register</h1>
+                <p class="lead">Join WasteWise to start recycling today!</p>
+                <div class="row">
+                    <div class="col-12 pb-4">
+                        <form action="../php/register.php" method="POST" class="my-5 card g-lg-3 gy-3 bg-white">
+                            <div class="form-group col-md-6">
+                                <label for="username">Username:</label>
+                                <input type="text" id="username" name="username" class="form-control" required>
+                            </div>
+                            <div class="form-group col-md-6">
+                                <label for="email">Email:</label>
+                                <input type="email" id="email" name="email" class="form-control" required>
+                            </div>
+                            <div class="form-group col-md-6">
+                                <label for="pwd">Password:</label>
+                                <input type="password" id="pwd" name="pwd" class="form-control" required>
+                            </div>
+                            <div class="form-group col-md-6">
+                                <label for="roles">Role:</label>
+                                <select id="roles" name="roles" class="form-control">
+                                    <option value="admins">Admin</option>
+                                    <option value="recycler">Recycler</option>
+                                </select>
+                            </div>
+                            <button type="submit" class="col-12 btn btn-primary btn-block">Register</button>
+                            
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer-main bg-dark text-white text-center py-3 mt-auto">
+        <p>&copy; 2024 WasteWise. All Rights Reserved.</p>
+    </footer>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.3/dist/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>

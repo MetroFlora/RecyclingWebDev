@@ -1,0 +1,73 @@
+<?php
+session_start();
+
+if (!isset($_SESSION['username'])) {
+    // Redirect to login page if not logged in
+    header("Location: login.php");
+    exit();
+}
+
+$username = $_SESSION['username'];
+?>
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>User Dashboard - Green Gear</title>
+    <link rel="stylesheet" href="css/user.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body class="main">
+    <div class="user-dashboard-container">
+        <div class="user-welcome-message">
+            <h1>Welcome, <?php echo htmlspecialchars($username); ?>!</h1>
+        </div>
+        <div class="user-operations">
+            <div class="user-operation-container">
+                <div class="icon"><i class="fas fa-recycle"></i>
+                </div>
+                <h3>Center Locators</h3>
+                <a href="center_locators.php">View Centers</a>
+            </div>
+            <div class="user-operation-container">
+                <div class="icon"><i class="fas fa-truck"></i>
+                </div>
+                <h3>Request Pickup</h3>
+                <a href="request_pickup.php">Request Pickup</a>
+            </div>
+            <div class="user-operation-container">
+                <div class="icon"><i class="fas fa-bullhorn"></i>
+                </div>
+                <h3>Public Awareness</h3>
+                <a href="public_awareness.php">Learn More</a>
+            </div>
+            <div class="user-operation-container">
+                <div class="icon"><i class="fas fa-user"></i>
+                </div>
+                <h3>User Profile</h3>
+                <a href="user_profile.php">View Profile</a>
+            </div>
+            <div class="user-operation-container">
+                <div class="icon"><i class="fas fa-history"></i>
+                </div>
+                <h3>Pickup History</h3>
+                <a href="pickup_history.php">View History</a>
+            </div>
+            <div class="user-operation-container">
+                <div class="icon"><i class="fas fa-star"></i>
+                </div>
+                <h3>Rate Service</h3>
+                <a href="rate_service.php">Rate Service</a>
+            </div>
+            <div class="user-operation-container">
+                <div class="icon"><i class="fas fa-sign-out-alt"></i>
+                </div>
+                <h3>Log Out</h3>
+                <a href="logout.php">Log Out</a>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
